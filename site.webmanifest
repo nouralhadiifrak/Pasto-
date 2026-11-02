@@ -1,0 +1,22 @@
+{
+  "name": "Pasto · Cucina italiana",
+  "short_name": "Pasto",
+  "description": "Cuisine italienne au boulevard Al Qods, Casablanca. Réservation et commande en ligne.",
+  "id": "/",
+  "start_url": "/?source=app",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#144a3d",
+  "theme_color": "#144a3d",
+  "lang": "fr",
+  "categories": ["food", "shopping"],
+  "icons": [
+    { "src": "/assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "La carte", "url": "/commander/?source=app", "icons": [{ "src": "/assets/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Réserver", "url": "/reserver/?source=app", "icons": [{ "src": "/assets/icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
