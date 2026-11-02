@@ -4,9 +4,9 @@
  * if the network fails or takes more than 4 s). Pictures, fonts and libraries: the saved copy, refreshed in the
  * background. Orders, maps and the staff app are never cached here. Raise VERSION to drop every saved copy.
  */
-const VERSION = "pasto-v1";
+const VERSION = "pasto-v2";
 const CORE = [
-  "/", "/commander/", "/reserver/", "/css/style.css?v=1", "/js/intro.js?v=1", "/js/config.js?v=1", "/js/i18n.js?v=1",
+  "/", "/commander/", "/reserver/", "/css/style.css?v=2", "/js/intro.js?v=1", "/js/config.js?v=1", "/js/i18n.js?v=1",
   "/js/menu-data.js?v=1", "/js/reviews.js?v=1", "/js/art.js?v=1", "/js/orders.js?v=1", "/js/common.js?v=1",
   "/js/home.js?v=1", "/js/order.js?v=1", "/js/reserve.js?v=1",
   "/assets/brand/logo-cream.svg", "/assets/icons/icon-192.png",

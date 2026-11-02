@@ -668,3 +668,21 @@ html.intro-done .brand__logo { opacity: 1; }
 .burst { position: fixed; top: 0; left: 0; width: 0; height: 0; z-index: 200; pointer-events: none; }
 .burst span { position: absolute; line-height: 1; will-change: transform, opacity; filter: drop-shadow(0 4px 6px rgba(0, 0, 0, .35)); }
 body[data-page="order"] .footer { position: relative; z-index: 1; }
+
+/* ---------- Aurora on the story band: 4 soft glows blended (screen) onto the green ----------
+ * The band's own green is the backdrop (the section is an isolated group, so the glows blend with it only); the
+ * glow holder has no background of its own. top/right/bottom/left instead of inset, for old phones. */
+.story { isolation: isolate; }
+.story__aura { position: absolute; top: 0; right: 0; bottom: 0; left: 0; overflow: hidden; pointer-events: none; }
+.story__aura i { position: absolute; top: 0; right: 0; bottom: 0; left: 0; mix-blend-mode: screen; transform: translateZ(0); will-change: transform; pointer-events: none; }
+.story__aura .aura-1 { background: radial-gradient(circle at 15% 50%, rgba(60, 170, 128, .85) 0%, transparent 62%); filter: blur(200px); animation: auraDrift 18s ease-in-out infinite alternate; }
+.story__aura .aura-2 { background: radial-gradient(circle at 55% 30%, rgba(150, 215, 180, .45) 0%, transparent 56%); filter: blur(200px); }
+.story__aura .aura-3 { background: radial-gradient(circle at 80% 60%, rgba(226, 166, 72, .75) 0%, transparent 62%); filter: blur(175px); animation: auraDrift 24s ease-in-out infinite alternate-reverse; }
+.story__aura .aura-4 { background: radial-gradient(circle at 40% 80%, rgba(204, 96, 52, .7) 0%, transparent 52%); filter: blur(150px); }
+.story > .wrap { position: relative; z-index: 1; }
+@keyframes auraDrift { from { transform: translateZ(0) translate(-4%, -3%); } to { transform: translateZ(0) translate(4%, 3%); } }
+@media (min-width: 900px) {
+  .story__aura .aura-1, .story__aura .aura-2 { filter: blur(260px); }
+  .story__aura .aura-3 { filter: blur(252px); }
+  .story__aura .aura-4 { filter: blur(216px); }
+}
